@@ -7,7 +7,7 @@ import { AISDKExporter } from "langsmith/vercel";
 import express, { type Request, type Response }  from "express";
 
 const app = express()
-const port = 3000
+const port = process.env.PORT
 
 app.get('/', async (_req: Request, res: Response) => {
   const result = await generateText({
